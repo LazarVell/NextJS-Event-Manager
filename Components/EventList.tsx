@@ -5,6 +5,7 @@ import RemoveButton from "./RemoveButton";
 import Link from "next/link";
 import { HiPencilAlt } from "react-icons/hi";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface Event {
   _id: string;
@@ -36,10 +37,13 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
   const { data: session } = useSession();
 
+  const router = useRouter();
+
   useEffect(() => {
     const fetchData = async () => {
       const { events } = await getEvents();
       setEvents(events);
+      router.refresh();
     };
 
     fetchData();
@@ -62,6 +66,7 @@ const EventList = () => {
       if (!res.ok) {
         throw new Error("Failed to sign up.");
       }
+      router.refresh();
     } catch (error) {
       console.log(error);
     }

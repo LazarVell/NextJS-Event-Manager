@@ -27,3 +27,9 @@ Until you register, you will only be able to see existing events.
 The app will only accept unique E-mails for registration.
 
 Once registered, you can login, and start editing, removing or adding events, and signing up for them!
+
+There is currently an issue with signing up, once you sign up, the page needs to be refreshed for the effects to be seen. I understand the nature of this issue but I did not have the time to work on it before the deadline due to the fact it was discovered very late.
+
+Also, while it is not specifically requested, I would like to implement an "unsub" logic to enable users to remove themselves from events as well as signing up.
+
+For authentication, NextAuth is used, which implements JWT.

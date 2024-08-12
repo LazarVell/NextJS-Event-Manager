@@ -17,9 +17,7 @@ const RemoveButton: React.FC<RemoveButtonProps> = ({ id }) => {
       const res = await fetch(`http://localhost:3000/api/events?id=${id}`, {
         method: "DELETE",
       });
-      if (res.ok) {
-        router.refresh();
-      }
+      router.refresh();
     }
   };
 
