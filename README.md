@@ -33,3 +33,5 @@ There is currently an issue with signing up, once you sign up, the page needs to
 Also, while it is not specifically requested, I would like to implement an "unsub" logic to enable users to remove themselves from events as well as signing up.
 
 For authentication, NextAuth is used, which implements JWT.
+
+.env was included just for the purposes of making this project easier to setup for review. Such sensitive data should be kept secure.
